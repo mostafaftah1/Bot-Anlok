@@ -1871,7 +1871,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     try:
-        asyncio.run(main())
+        asyncio.get_event_loop().run_until_complete(main())
     except KeyboardInterrupt:
         print("\n👋 تم إيقاف البوت")
     except Exception as e:
