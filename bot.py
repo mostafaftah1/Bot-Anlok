@@ -49,7 +49,7 @@ class Config:
     """فئة الإعدادات الرئيسية"""
     
     # توكن البوت
-    BOT_TOKEN = "8389696171:AAHQJMDDibsJiIb3TftSQ_RmvmM3DyXGdMo"
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8389696171:AAHQJMDDibsJiIb3TftSQ_RmvmM3DyXGdMo")
     
     # معرف المطور الأساسي
     OWNER_ID = 6918240643
@@ -1637,7 +1637,7 @@ def main():
     
     # بدء البوت
     print("✅ البوت يعمل...")
-    application.run_polling()
+    application.run_polling(drop_pending_updates=True)
 
 async def stats_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """معالج أمر الإحصائيات"""
