@@ -49,7 +49,7 @@ class Config:
     """فئة الإعدادات الرئيسية"""
     
     # توكن البوت
-    BOT_TOKEN = "8332111502:AAEKGCXJKkrRJggPQDGiwuKrufXO2Ywjsrw"
+    BOT_TOKEN = "8389696171:AAHQJMDDibsJiIb3TftSQ_RmvmM3DyXGdMo"
     
     # معرف المطور الأساسي
     OWNER_ID = 6918240643
