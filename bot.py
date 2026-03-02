@@ -49,7 +49,7 @@ class Config:
     """فئة الإعدادات الرئيسية"""
     
     # توكن البوت
-    BOT_TOKEN = "8332111502:AAGkDaOCa14v4hmAxb24VJIR7jSxlKXzBFU"
+    BOT_TOKEN = "8755132828:AAFQzrbEXq-w-ZfjCMNIHD7H4mOzHV0QFcw"
     
     # معرف المطور الأساسي
     OWNER_ID = 6918240643
@@ -1580,7 +1580,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(help_text, parse_mode=ParseMode.MARKDOWN)
 
 
-async def main():
+def main():
     """الدالة الرئيسية لتشغيل البوت"""
     
     # إنشاء التطبيق
@@ -1637,7 +1637,7 @@ async def main():
     
     # بدء البوت
     print("✅ البوت يعمل...")
-    await application.run_polling()
+    application.run_polling()
 
 async def stats_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """معالج أمر الإحصائيات"""
@@ -1871,7 +1871,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     try:
-        asyncio.get_event_loop().run_until_complete(main())
+        main()
     except KeyboardInterrupt:
         print("\n👋 تم إيقاف البوت")
     except Exception as e:
